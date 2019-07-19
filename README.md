@@ -1,6 +1,6 @@
 # Space Travel
 
-![alt text](https://jmserv.000webhostapp.com/SpaceTravel/img/01.gif "Cover")
+![alt text](https://user-images.githubusercontent.com/44101085/61530691-2c804500-a9fb-11e9-8d84-c18ed321fbc6.gif "Cover")
 
 ![alt text](https://user-images.githubusercontent.com/44101085/61529285-62232f00-a9f7-11e9-9d23-ee7f01891fe8.png "Presentation")
 
