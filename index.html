@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Space Travel</title>
+<link rel="icon" type="image/png" href="img/favicon/android-icon-192x192.png">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+<meta name="theme-color" content="#ffffff"/>
+<script>
+setTimeout(function(){document.getElementById("text").className += " animation"; document.getElementById("buttons").className += " animation";}, 600);
+</script>
+<style>
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	}
+	#popup {
+		position: fixed;
+		top: 5%;
+		transform: translateY(30%);
+		opacity: 0;
+		display: flex;
+		align-items: center;
+		margin-left: 10%;
+		justify-content: center;
+		background-color: rgba(255,70,73,0.80);
+		color: white;
+		font-family: 'VT323', monospace;
+		border-radius: 5px;
+		font-size: 2em;
+		width: 80%;
+		height: 10%;
+		z-index: 1;
+		transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+	}
+	
+	#popup.aparecer{
+		transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+		transform: translateY(0);
+		opacity: 1;
+	}
+	
+	.flex-container {
+		animation: aparece 1.5s ease-out 0s 1;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		background-image: url('img/bg.gif');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	@keyframes aparece {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	.wrapper {
+		margin-top: -12%;
+		text-align: center;
+		width: 100%;
+		z-index: 1;
+	}
+	#text {
+		opacity: 0;
+		transform: translateY(-100%);
+		transition: opacity 2s ease-out 1.1s, transform 2s ease-out 1.1s;
+		
+		text-align: center;
+		color: white;
+		font-family: 'VT323', monospace;
+		font-size: 8em;
+	}
+	.buttons {
+		width: 100%;
+		text-align: center;
+	}
+	button:first-child {
+		margin-right: 2%;
+	}
+	#buttons {
+		opacity: 0;
+		transform: translateY(100%);
+		transition: opacity 2s ease-out 1.1s, transform 2s ease-out 1.1s;
+	}
+	.button {
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0);
+		transform: scale(1);
+		color: white;
+		font-family: 'VT323', monospace;
+		font-size: 4em;
+		border: 3px solid white;
+		border-radius: 5px;
+		cursor: pointer;
+		
+		padding: 10px;
+		
+		transition: background-color 0.1s ease-in, transform 0.1s ease-in;
+	}
+	#text.animation, #buttons.animation {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.button:hover {
+		background-color: rgba(255, 255, 255, 0.2);
+		transform: scale(1.1);
+	}
+	#meuCanvas{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: 0;
+	}
+</style>
+</head>
+
+<body>
+     <div class="popup" id="popup"><p>Ainda Não Disponível! :(</p></div>
+     <div class="flex-container">
+     	<div class="wrapper">
+     		<h1 id="text">Space Travel</h1>
+			<div class="buttons" id="buttons"><button id="like" class="button" onclick="gostei();">Gostei! :)</button><button id="dislike" class="button" onclick="naoGostei();">Não Gostei! &gt;:(</button></div>
+    	</div>
+     </div>
+     <canvas id="meuCanvas" width="500" height="500"></canvas>
+   <script src="js/personagem.js"></script>
+</body>
+</html>

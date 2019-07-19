@@ -1,0 +1,8 @@
+frame individual:
+504 X 504
+
+flutua_sprite:
+8 sprites
+
+olha_sprite:
+15 frames
